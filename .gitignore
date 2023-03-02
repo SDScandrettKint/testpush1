@@ -1,0 +1,10 @@
+*.pyc
+*.log
+deployment_test/logs
+deployment_test/export_deliverables
+deployment_test/cantaloupe/*
+deployment_test/media/packages
+deployment_test/uploadedfiles/*
+deployment_test/settings_local.py
+.vscode/
+CACHE
