@@ -561,6 +561,7 @@ class Node(models.Model):
     sortorder = models.IntegerField(blank=True, null=True, default=0)
     fieldname = models.TextField(blank=True, null=True)
     exportable = models.BooleanField(default=False, null=True)
+    layersortorder = models.IntegerField(blank=True, null=True, default=None)
     alias = models.TextField(blank=True, null=True)
     hascustomalias = models.BooleanField(default=False)
 
@@ -1214,6 +1215,7 @@ class MapLayer(models.Model):
     zoom = models.FloatField(blank=True, null=True)
     legend = models.TextField(blank=True, null=True)
     searchonly = models.BooleanField(default=False)
+    layersortorder = models.IntegerField(blank=True, null=True, default=None)
 
     @property
     def layer_json(self):

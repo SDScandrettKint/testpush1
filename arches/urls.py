@@ -15,7 +15,7 @@ GNU Affero General Public License for more details.
 You should have received a copy of the GNU Affero General Public License
 along with this program. If not, see <http://www.gnu.org/licenses/>.
 """
-
+from arches.app.views.reorder_maps import ReorderMaps
 from django.views.decorators.cache import cache_page
 from django.contrib.auth import views as auth_views
 from django.conf.urls import include, url
@@ -298,6 +298,7 @@ urlpatterns = [
     url(r"^etl-manager$", ETLManagerView.as_view(), name="etl_manager"),
     url(r"^clear-user-permission-cache", ClearUserPermissionCache.as_view(), name="clear_user_permission_cache"),
     url(r"^transform-edtf-for-tile", api.TransformEdtfForTile.as_view(), name="transform_edtf_for_tile"),
+    url(r"^reorder_maps", ReorderMaps.as_view(), name ="reorder_maps"),
 ]
 
 if settings.DEBUG:
